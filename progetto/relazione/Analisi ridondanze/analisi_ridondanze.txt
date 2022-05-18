@@ -1,0 +1,74 @@
+Operazione1 = Aggiungere un voto ad un commento (10 volte al giorno)
+Operazione2 = Visualizzare tutti i dati di un commento incluso la somma dei voti (100 volte al giorno)
+
+c(Op1) caso con ridondanza
+
+10 * 1 * (2 * 2 + 1) = 50
+
+c(Op2) caso con ridondanza
+
+100 * 1 * (2 * 0 + 1) = 100
+
+
+c(Op1) caso senza ridondanza
+
+10 * 1 * (2 * 1 + 0) = 20
+
+c(Op2) caso senza ridondanza
+
+100 * 1 * (2 * 0 + 5) = 500
+
+
+Riassumendo
+
+c(Srid) = c(Op1) + c(Op2) = 150
+
+c(S) = c(Op1) + c(Op2) = 520
+
+520/150 = 3,46
+
+
+Aggiunta di memoria con l'attributo ridondante somma_punti è di (15 * 2) = 30 byte
+
+
+La presenza della ridondanza aumenta la memoria in modo trascurabile e migliora significativamente le prestazioni.
+In questo caso è conveniente introdurre l'attributo ridondante  somma_punti.
+
+
+
+
+Operazione1 = Aggiungere un voto ad un post (10 volte al giorno)
+Operazione2 = Visualizzare tutti i dati di un post incluso la somma dei voti (100 volte al giorno)
+
+c(Op1) caso con ridondanza
+
+10 * 1 * (2 * 2 + 1) = 50
+
+c(Op2) caso con ridondanza
+
+100 * 1 * (2 * 0 + 1) = 100
+
+
+c(Op1) caso senza ridondanza
+
+10 * 1 * (2 * 1 + 0) = 20
+
+c(Op2) caso senza ridondanza
+
+100 * 1 * (2 * 0 + 5) = 500
+
+
+Riassumendo
+
+c(Srid) = c(Op1) + c(Op2) = 150
+
+c(S) = c(Op1) + c(Op2) = 520
+
+520/150 = 3,46
+
+
+Aggiunta di memoria con l'attributo ridondante somma_punti_post è di (20 * 2) = 40 byte
+
+
+La presenza della ridondanza aumenta la memoria in modo trascurabile e migliora significativamente le prestazioni.
+In questo caso è conveniente introdurre l'attributo ridondante  somma_punti_post.

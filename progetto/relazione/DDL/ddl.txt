@@ -1,0 +1,102 @@
+CREATE TABLE utente(
+    id tinyint AUTO_INCREMENT PRIMARY KEY,
+    email varchar(255) NOT NULL UNIQUE,
+    nome varchar(255) NOT NULL UNIQUE,
+    pass varchar(255) NOT NULL,
+    tel varchar(15) NOT NULL,
+    documento varchar(255) NOT NULL UNIQUE,
+    foto varchar(255) DEFAULT NULL
+);
+
+CREATE TABLE blog(
+    id tinyint AUTO_INCREMENT PRIMARY KEY,
+    autore tinyint NOT NULL
+        REFERENCES utente(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    nome varchar(255) NOT NULL,
+    foto varchar(255) NOT NULL,
+    categoria tinyint NOT NULL
+        REFERENCES categoria(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    data datetime NOT NULL,
+    nome_c varchar(255) DEFAULT NULL   
+);
+
+CREATE TABLE categoria(
+    id tinyint AUTO_INCREMENT PRIMARY KEY,
+    nome varchar(255) NOT NULL,
+    utente tinyint NOT NULL
+        REFERENCES utente(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+
+CREATE TABLE sub(
+    cat1 tinyint NOT NULL
+        REFERENCES categoria(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    cat2 tinyint NOT NULL
+        REFERENCES categoria(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    PRIMARY KEY(cat1, cat2)
+);
+
+CREATE TABLE post(
+    id tinyint AUTO_INCREMENT PRIMARY KEY,
+    data datetime NOT NULL,
+    titolo varchar(255) NOT NULL,
+    foto varchar(255) NOT NULL,
+    testo text NOT NULL,
+    blog tinyint NOT NULL
+        REFERENCES blog(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    somma_punti_post smallint DEFAULT NULL
+);
+
+CREATE TABLE commento(
+    id tinyint AUTO_INCREMENT PRIMARY KEY,
+    data datetime NOT NULL,
+    nota varchar(255) NOT NULL,
+    utente tinyint NOT NULL
+        REFERENCES utente(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    post tinyint NOT NULL
+        REFERENCES post(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    somma_punti smallint DEFAULT NULL
+);
+
+CREATE TABLE punteggio(
+    utente tinyint NOT NULL
+        REFERENCES utente(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    commento tinyint NOT NULL
+        REFERENCES commento(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    punteggio tinyint NOT NULL
+        CHECK(punteggio>=0 AND punteggio<=5),
+    PRIMARY KEY(utente, commento)
+);
+
+CREATE TABLE punteggio_post(
+    utente tinyint NOT NULL
+        REFERENCES utente(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    post tinyint NOT NULL
+        REFERENCES post(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    punteggio tinyint NOT NULL
+        CHECK(punteggio>=0 AND punteggio<=5),
+    PRIMARY KEY(utente, post)
+);

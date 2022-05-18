@@ -1,0 +1,171 @@
+/* Header */
+
+.header{display:flex; justify-content:space-between; background-color:blueviolet; margin-bottom:50px;}
+.user-icon i{display:inline-block; margin:5px; color:whitesmoke;}
+.user-icon h3{padding:5px; color:whitesmoke; display:inline-block;}
+#hamburger{align-self:center; cursor:pointer; display:none;}
+.navbar{list-style-type:none; padding:0;}
+.navbar li{margin:5px; display:inline-block;}
+.navbar li a{display:block; margin:5px; padding:5px; text-decoration:none; color:whitesmoke;}
+.search-navbar{align-self:center;}
+.search-navbar input, .search-navbar button{display:inline-block; margin:5px;}
+.search-navbar button{background-color:red; cursor:pointer;}
+.search-navbar button i{color:white;}
+#user-image{width:40px; height:40px; border-radius:20px; display:inline-block; margin:5px;}
+.search-navbar button:hover{background-color:#303030;}
+.navbar li a:hover{color:#303030;}
+#hamburger:hover{background-color:#303030; color:whitesmoke;}
+
+/* Blog */
+
+.container{display:flex; justify-content:space-between;}
+.grid-container{display:grid; grid-template-columns:repeat(3, 1fr); width:70%; margin:5px;}
+.card{margin:10px;}
+.card h2{text-align:center; color:blueviolet;}
+.card img{width:100%;}
+.card p{padding:5px; text-align:center; line-height:1.6;}
+.card button{display:block; margin:10px auto; background-color:green; border-radius:5px;}
+.card button a{display:block; margin:5px; text-decoration:none; color:whitesmoke;}
+.card button:hover{background-color:#80ff00;}
+
+/* Categories */
+
+.categories{width:20%; margin:5px;}
+.categories h2{text-align:center;}
+.side-navbar{list-style-type:none; padding:5px;}
+.side-navbar li{border:1px solid black; margin:5px; border-radius:5px;}
+.side-navbar li a{display:block; margin:5px; text-align:center; text-decoration:none; color:blueviolet;}
+#votati{background-color:orange;}
+
+/* Single */
+
+.single-card{width:70%; margin:auto;}
+.single-card img{width:100%;}
+.single-card h1{text-align:center; color:blueviolet;}
+.single-card i{display:inline-block; margin:5px;}
+.single-card h4{display:inline-block;}
+.single-card p{padding:5px; line-height:1.6;}
+
+/* Comments */
+
+.single-card form{margin-bottom:75px;}
+.single-card textarea{display:block; max-width:95%;}
+.single-card button{background-color:green; display:block; margin-top:10px; padding:5px; border-radius:5px; color:whitesmoke; cursor:pointer;}
+.comment-user{margin-bottom:20px;}
+.comment-user h3{color:blueviolet; display:inline-block; margin-right:20px;}
+.single-card button:hover{background-color:#80ff00;}
+#elimina-commento{color:red;}
+#voto_tot_c{color:green;}
+
+/* Edit Comment */
+
+#edit-comment{margin:auto;}
+#aggiorna, #annulla{display:inline-block; margin:5px;}
+#annulla{background-color:blue;}
+#annulla:hover{background-color:#6495ED;}
+.button-edit-comment{display:flex; justify-content:center;}
+
+/* Punteggio */
+
+#submit_c{background-color:orange; display:inline-block;}
+#submit_c:hover{background-color:#E9967A;}
+#submit_p{background-color:blue;}
+#submit_p:hover{background-color:#6495ED;}
+
+/* Login */
+
+.login-container form label{display:block; text-align:center;}
+.login-container form input, .login-container form button{display:block; margin:20px auto;}
+.login-container form button{background-color:green; color:whitesmoke; border-radius:5px; cursor:pointer;}
+.login-container p{text-align:center; color:red;}
+.login-container form button:hover{background-color:#80ff00;}
+
+/* Admin */
+
+.dashboard-container{display:flex; justify-content:space-between;}
+.dashboard-navbar{list-style-type:none; padding:0; background-color:blueviolet; width:15%; border:1px solid green;}
+.dashboard-navbar li{margin:20px;}
+.dashboard-navbar li a{display:block; margin:5px; padding:5px; text-decoration:none; color:whitesmoke;}
+.dashboard-navbar li a i{display:inline-block; margin-right:5px;}
+.dashboard-container table{margin:5px; width:70%; align-self:center; border-collapse: collapse;}
+.dashboard-container table th{border:1px solid black; color:blueviolet;}
+.dashboard-container table td{text-align:center; border:1px solid black;}
+.dashboard-container table td a i{color:red;}
+#edit{color:orange;}
+.dashboard-navbar li a:hover{color:#303030;}
+
+/* New Post */
+
+.new-post-container{display:flex; justify-content:space-between;}
+.post-container{width:70%;}
+.post-container form{margin:5px;}
+.post-container form label, .post-container form input, .post-container form textarea, .post-container form button, .post-container form select{display:block; margin:20px;}
+.post-container form label{text-align:center; color:blueviolet;}
+.post-container form input, .post-container form textarea, .post-container form button, .post-container form select{margin: 20px auto;}
+.post-container form button{padding:10px; background-color:green; color:whitesmoke; border-radius:5px; cursor:pointer;}
+.post-container form p{color:red; text-align:center;}
+.post-container form button:hover{background-color:#80ff00;}
+
+/* Show Post */
+
+#show-title{text-align:center; margin-bottom:50px;}
+#show-post{width:100%;}
+#show-card{margin:25px;}
+
+.pagination_post{list-style-type:none; padding:0; display:flex; justify-content:center;}
+.pagination_post li{margin:5px;}
+.pagination_post li a{display:block; margin:5px; padding:5px; text-decoration:none; color:black;}
+.pagination_post li a:hover{background-color:blueviolet; color:whitesmoke; border-radius:25px;}
+
+/* Modifica utente */
+
+#update_message{color:red;}
+#delete_user{background-color:red;}
+#delete_user a{text-decoration:none; color:whitesmoke;}
+#delete_user:hover{background:#303030;}
+
+/* Footer */
+
+.footer{margin-top:125px; background-color:#303030;}
+.footer p{text-align:center; color:whitesmoke; padding:30px;}
+
+/* Smartphone */
+
+@media(max-width:767px){
+
+    /* Header */
+
+    .header{flex-wrap:wrap;}
+    #hamburger{display:block; margin:5px;}
+    .navbar{width:100%; display:none;}
+    .navbar li{display:block;}
+    .search-navbar{width:100%;}
+    .hamburger-menu{display:block;}
+
+    /* Blog */
+
+    .grid-container{grid-template-columns:repeat(1, 1fr); width:100%;}
+
+    /* Categories */
+
+    .container{flex-wrap:wrap;}
+    .categories{width:100%;}
+
+    /* Single */
+
+    .single-card{width:100%;}
+
+    /* Admin */
+
+    .dashboard-container{flex-wrap:wrap;}
+    .dashboard-navbar{width:100%; display:none;}
+    .dashboard-navbar li a{text-align:center;}
+    .dashboard-container table{width:100%; margin:20px auto;}
+    .hamburger-menu-admin{display:block;}
+    
+    /* New Post */
+
+    .new-post-container{flex-wrap:wrap;}
+    .post-container{width:100%;}
+    .post-container form textarea{max-width:95%;}
+}

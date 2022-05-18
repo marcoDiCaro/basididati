@@ -1,0 +1,23 @@
+utente
+(id, email, nome, pass, tel, doc, foto)
+
+blog
+(id, autore, nome, foto, categoria, data, nome_c)
+
+post
+(id, data, titolo, foto, testo, blog, somma_punti_post)
+
+commento
+(id, data, nota, utente, post, somma_punti)
+
+categoria
+(id, nome, utente)
+
+sub
+(cat1, cat2)
+
+punteggio
+(utente, commento, punteggio)
+
+punteggio_post
+(utente, post, punteggio)
